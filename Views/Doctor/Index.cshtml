@@ -1,0 +1,30 @@
+﻿@model TagHelpers.Models.Doctor
+@{
+    Layout = null;
+}
+
+<table>
+    <tr>
+        <td>Id: </td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Adı: </td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Soyadı: </td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>Hastane Adı: </td>
+        <td>@Model.HospitalName</td>
+    </tr>
+    <tr>
+        <td>Çalışma Durumu: </td>
+        @{
+            var isWorking = Model.IsWorking ? "Çalışıyor" : "Emekli";
+        }
+        <td>@isWorking</td>
+    </tr>
+</table>

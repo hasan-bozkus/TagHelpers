@@ -1,0 +1,59 @@
+﻿@model TagHelpers.Models.Doctor
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    Layout = null;
+}
+
+<form asp-controller="Doctor", asp-action="Create">
+    <table>
+        <tr>
+            <td>
+                <label asp-for="Id">Id: </label>
+            </td>
+            <td>
+                <input type="text" asp-for="Id" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Name">Adı: </label>
+            </td>
+            <td>
+                <input type="text" asp-for="Name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Surname">Soyadı: </label>
+            </td>
+            <td>
+                <input type="text" asp-for="Surname" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="HospitalName">Hastane Adı: </label>
+            </td>
+            <td>
+                <input type="text" asp-for="HospitalName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="IsWorking">Çalışma Durumu: </label>
+            </td>
+            <td>
+                <select type="text" asp-for="IsWorking">
+                    <option value="true">Çalışıyor</option>
+                    <option value="false">Emekli</option>
+                </select>
+            </td>
+        </tr>
+            <td>
+                <button type="submit">Ekle</button>
+            </td>
+        </tr>
+    </table>
+</form>
