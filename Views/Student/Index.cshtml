@@ -1,15 +1,20 @@
-﻿
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
+@{
+    var ang = new Dictionary<string, string>
+    {
+        { "age", "21" }, 
+        { "name", "Hasan" }
+    };
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-</body>
-</html>
+<a asp-controller="Student" asp-action="Index">Index</a> <br />
+<a asp-controller="Student" asp-action="GetList">GetList</a> <br />
+<a asp-controller="Student" asp-action="Detail" asp-route-id="47">Detail</a> <br />
+<a asp-controller="Student" asp-action="GetList" asp-route-age="21"> GetList → Age: 21 </a> <br />
+<a asp-route="getlistroute">GetList</a> <br />
+<a asp-route="filterstudentroute" asp-all-route-data="ang">GetList → Age: 21, Name: Hasan</a> <br />
+<a asp-controller="Student" asp-action="GetList" asp-fragment="#İbrahim">GetList → #İbrahim</a> <br />
